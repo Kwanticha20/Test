@@ -116,6 +116,70 @@ const WrapperHr= styled.hr`
   margin-top:-275px;
   width:880px;  
 `;
+const ButtonLayoutStyle = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius:10px;
+  width:200px;
+  height: 150px;
+  margin-top:-180px;
+  border:5px;
+  
+ &:hover {
+  background-color:#ffa200 ;
+  }
+`;
+const Wrappersquare = styled.div`
+  width: 80px;
+  height: 80px;
+  background-color:gray;
+`;
+const Wrappercircle = styled.hr`
+  width: 80px;
+  height: 80px;
+  border-radius:50px;
+  background-color:gray;
+`;
+const Wrapperellipse = styled.hr`
+  width: 80px;
+  height: 140px;
+  border-radius: 50%;
+  transform: rotate(90deg);
+  background-color:gray;
+`;
+const ButtonLayoutStyles = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius:10px;
+  width:300px;
+  height: 150px;
+  margin-top:-950px;
+  border:5px;
+  
+ &:hover {
+  background-color:#ffa200 ;
+  }
+`;
+const Wrappertrapezoid = styled.div`
+  width: 150px; 
+  height: 100px; 
+  background-color:gray;
+  transform: perspective(210px) rotateX(30deg); 
+  margin: 50px; 
+`;
+const WrappersquareSurface = styled.div`
+  width: 200px;
+  height: 80px;
+  background-color:gray;
+`;
+const Wrapperparallelogram = styled.div`
+  width: 150px;
+  height: 80px;
+  background-color:gray;
+  transform: skew(20deg);
+`;
 function LayoutPage() {
   const { t } = useTranslation();
   return (
@@ -147,6 +211,40 @@ function LayoutPage() {
         </ColStyle>
       </RowStyle>
       <WrapperHr/>
+      <RowStyle>
+      <ColStyle span={3}>
+          <ButtonLayoutStyle>
+            <Wrappersquare/>
+          </ButtonLayoutStyle>
+        </ColStyle>
+        <ColStyle span={4}>
+          <ButtonLayoutStyle>
+            <Wrappercircle/>
+          </ButtonLayoutStyle>
+        </ColStyle>
+        <ColStyle span={3}>
+          <ButtonLayoutStyle>
+            <Wrapperellipse/>
+          </ButtonLayoutStyle>
+        </ColStyle>
+      </RowStyle>
+      <RowStyle>
+      <ColStyle span={4}>
+          <ButtonLayoutStyles>
+            <Wrappertrapezoid/>
+          </ButtonLayoutStyles>
+        </ColStyle>
+        <ColStyle span={5}>
+          <ButtonLayoutStyles>
+            <WrappersquareSurface/>
+          </ButtonLayoutStyles>
+        </ColStyle>
+        <ColStyle span={4}>
+          <ButtonLayoutStyles>
+            <Wrapperparallelogram/>
+          </ButtonLayoutStyles>
+        </ColStyle>
+      </RowStyle>
         </>
     </>
   )
